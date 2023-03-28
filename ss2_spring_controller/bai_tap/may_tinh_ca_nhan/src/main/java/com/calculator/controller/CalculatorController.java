@@ -1,6 +1,6 @@
-package com.may_tinh_ca_nhan.controller;
+package com.calculator.controller;
 
-import com.may_tinh_ca_nhan.service.ICalculatorService;
+import com.calculator.service.ICalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
