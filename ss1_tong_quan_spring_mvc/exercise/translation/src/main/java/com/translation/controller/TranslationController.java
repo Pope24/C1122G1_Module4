@@ -1,7 +1,7 @@
 package com.translation.controller;
 
-import com.tu_dien.service.ITranslateService;
-import com.tu_dien.service.TranslateServiceImpl;
+import com.translation.service.ITranslateService;
+import com.translation.service.impl.TranslateServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

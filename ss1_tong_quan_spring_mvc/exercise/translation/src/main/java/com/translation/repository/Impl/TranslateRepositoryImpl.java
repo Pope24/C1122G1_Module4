@@ -1,4 +1,6 @@
-package com.translation.repository;
+package com.translation.repository.Impl;
+
+import com.translation.repository.ITranslateRepository;
 
 import java.util.HashMap;
 import java.util.Map;
