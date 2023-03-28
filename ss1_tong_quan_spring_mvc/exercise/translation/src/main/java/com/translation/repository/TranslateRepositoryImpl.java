@@ -1,10 +1,11 @@
-package com.tu_dien.repository;
+package com.translation.repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class TranslateRepositoryImpl implements ITranslateRepository{
+public class TranslateRepositoryImpl implements ITranslateRepository {
     static Map<String, String> wordList = new HashMap<>();
+
     static {
         wordList.put("hello", "xin chao");
         wordList.put("Hi", "xin chao");
@@ -14,9 +15,10 @@ public class TranslateRepositoryImpl implements ITranslateRepository{
         wordList.put("calculator", "may tinh");
         wordList.put("programming", "lap trinh");
     }
+
     @Override
     public String findWordTranslation(String word) {
-        for (Map.Entry<String, String> entry: wordList.entrySet()) {
+        for (Map.Entry<String, String> entry : wordList.entrySet()) {
             if (entry.getKey().equals(word)) {
                 return entry.getValue();
             }

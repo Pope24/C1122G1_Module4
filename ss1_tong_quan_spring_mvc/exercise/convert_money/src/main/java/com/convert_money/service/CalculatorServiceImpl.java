@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class CalculatorServiceImpl implements ICalculatorService{
+public class CalculatorServiceImpl implements ICalculatorService {
     public double convertUSD(double usd) {
         return usd * 23000;
     }

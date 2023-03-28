@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CalculatorController {
     @Autowired
     private ICalculatorService calculatorService;
+
     @GetMapping("")
     public String showFormCalculator() {
         return "form";
     }
+
     @PostMapping("{operator}")
     public String calculate(@RequestParam double numberOne, @RequestParam double numberTwo, @PathVariable String operator, Model model) {
         double result = 0;

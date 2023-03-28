@@ -1,4 +1,4 @@
-package com.tu_dien.service;
+package com.translation.service;
 
 import com.tu_dien.repository.ITranslateRepository;
 import com.tu_dien.repository.TranslateRepositoryImpl;

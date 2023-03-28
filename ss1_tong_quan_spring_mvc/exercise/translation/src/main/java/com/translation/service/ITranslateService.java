@@ -1,4 +1,4 @@
-package com.tu_dien.service;
+package com.translation.service;
 
 public interface ITranslateService {
     String findWordTranslation(String word);

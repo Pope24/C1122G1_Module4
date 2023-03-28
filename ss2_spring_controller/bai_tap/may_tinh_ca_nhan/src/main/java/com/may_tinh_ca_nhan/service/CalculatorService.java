@@ -3,7 +3,7 @@ package com.may_tinh_ca_nhan.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CalculatorService implements ICalculatorService{
+public class CalculatorService implements ICalculatorService {
     @Override
     public double calculate(double numberOne, double numberTwo, String operator) {
         switch (operator) {
@@ -12,8 +12,7 @@ public class CalculatorService implements ICalculatorService{
             case "divide":
                 if (numberTwo == 0) {
                     throw new ArithmeticException();
-                }
-                else {
+                } else {
                     return numberOne / numberTwo;
                 }
             case "multiple":

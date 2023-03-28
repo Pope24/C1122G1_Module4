@@ -1,4 +1,4 @@
-package com.ung_dung_chuyen_doi_tien_te.controller;
+package com.convert_money.controller;
 
 import com.ung_dung_chuyen_doi_tien_te.service.ICalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CalculatorController {
     @Autowired
     private ICalculatorService calculatorService;
+
     @GetMapping("calculate")
     public String showFormCalculator() {
         return "form";
     }
+
     @PostMapping("calculate/result")
     public String showResultCalculator(Model model, @RequestParam(name = "usd") double usd) {
         double result = calculatorService.convertUSD(usd);
