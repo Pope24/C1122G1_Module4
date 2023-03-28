@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0622e5e0-be83-4d0e-b28c-e52e84ebe919" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../ss1_tong_quan_spring_mvc/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1_tong_quan_spring_mvc/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/calculator/controller/CalculatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/calculator/service/ICalculatorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/calculator/service/impl/CalculatorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/src/main/java/com/sandwich_condiments/controller/CondimentsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/src/main/webapp/WEB-INF/views/form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich_condiments/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/src/main/java/com/email_validate/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/src/main/java/com/email_validate/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/src/main/java/com/email_validate/service/IEmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/src/main/webapp/WEB-INF/views/form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/email_validate/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/src/main/java/com/timezone/controller/TimezoneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/src/main/java/com/timezone/service/ITimezoneService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/src/main/java/com/timezone/service/TimezoneService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/timezone/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NbJYoUUdxmbYwKsbYReHKqBdVi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/CodeGym/Module_4/ss2_spring_controller/exercise/calculator",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "a45e9d2699461874e12ab1577cca5460",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.73" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.73" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="Gradle : com : may_tinh_ca_nhan-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="43c5b428-0538-4d97-b980-d49ce6c82680" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63688" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com : may_tinh_ca_nhan-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0622e5e0-be83-4d0e-b28c-e52e84ebe919" name="Changes" comment="" />
+      <created>1679926903568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679926903568</updated>
+      <workItem from="1679926904782" duration="2656000" />
+      <workItem from="1679973606885" duration="632000" />
+      <workItem from="1680005093083" duration="112000" />
+      <workItem from="1680005307249" duration="73000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
