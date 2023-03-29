@@ -1,5 +1,8 @@
 package com.save_email_configuration.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class EmailConfiguration {
     private String language;
     private int pageSize;

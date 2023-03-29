@@ -10,19 +10,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Email Configuration</title>
+    <title>Form Email Configuration</title>
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <style>
     tr {
         height: 40px;
     }
 </style>
 <body>
-    <h2 style="font-weight: bold">Setting</h2>
+<h2 style="font-weight: bold">Setting</h2>
 <form:form action="email-configuration" modelAttribute="emailConfiguration">
     <table>
         <tr>
-            <td><form:label path="language" cssStyle="font-weight: bold">Language</form:label></td>
+            <td><form:label path="language" cssClass="fw-bold">Language</form:label></td>
             <td><form:select path="language">
                 <option value="English">English</option>
                 <option value="Vietnamese">Vietnamese</option>
@@ -32,7 +34,7 @@
         </tr>
         <tr>
             <td>
-                <form:label path="pageSize" cssStyle="font-weight: bold">Page size</form:label>
+                <form:label path="pageSize" cssClass="fw-bold">Page size</form:label>
             </td>
             <td>
                 <span>Show </span>
@@ -48,32 +50,38 @@
             </td>
         </tr>
         <tr>
-            <td style="font-weight: bold">Spams filter</td>
+            <td>
+                <form:label path="spamsFilter" cssClass="fw-bold">Spams filter</form:label>
+            </td>
             <td>
                 <form:checkbox path="spamsFilter"/>
                 <span> Enable spams filter</span>
             </td>
         </tr>
         <tr>
-            <td style="font-weight: bold">Signature</td>
+            <td>
+                <form:label path="signature" cssClass="fw-bold">Signature</form:label>
+            </td>
             <td>
                 <form:textarea path="signature"/>
             </td>
         </tr>
         <tr>
-            <td><input type="submit" value="Update" style="background: #146ce0; color: #fff"></td>
-            <td><input type="button" value="Cancel"></td>
+            <td><input type="submit" class="btn btn-info" value="Update"></td>
+            <td><input type="button" class="btn btn-dark" onclick="window.location.href='version-current'"
+                       value="Check version"></td>
         </tr>
     </table>
 </form:form>
 <div style="color: red">
     <c:if test="${versionUpdateLatest != null}">
-        <h2>Version Update Email configuration latest</h2>
-        <h3>Language: ${versionUpdateLatest.language}</h3>
-        <h3>Page size: ${versionUpdateLatest.pageSize}</h3>
-        <h3>Spams filter: ${versionUpdateLatest.spamsFilter}</h3>
-        <h3>Signature: ${versionUpdateLatest.signature}</h3>
+        <h3>Version Update Email configuration latest</h3>
+        <h4>Language: ${versionUpdateLatest.language}</h4>
+        <h4>Page size: ${versionUpdateLatest.pageSize}</h4>
     </c:if>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
 </html>
