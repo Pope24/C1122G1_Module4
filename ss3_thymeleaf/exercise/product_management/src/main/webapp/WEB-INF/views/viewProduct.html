@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/listProduct :: head"></head>
+<style th:replace="/listProduct :: style"></style>
+<body>
+<div class="header" th:replace="/listProduct :: header"></div>
+<div class="main d-flex justify-content-center align-items-center flex-column m-5">
+    <table class="table">
+        <thead class="table-dark">
+        </thead>
+        <tbody>
+        <tr>
+            <th>ID</th>
+            <td th:text="${product.getId()}"></td>
+        </tr>
+        <tr>
+            <th>Name Product</th>
+            <td th:text="${product.getNameProduct()}"></td>
+        </tr>
+        <tr>
+            <th>Price Product</th>
+            <td th:text="${product.getPriceProduct()}"></td>
+        </tr>
+        <tr>
+            <th>Description Product</th>
+            <td th:text="${product.getDescriptionProduct()}"></td>
+        </tr>
+        <tr>
+            <th>Manufacturer</th>
+            <td th:text="${product.getManufacturer()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="footer" th:replace="/listProduct :: footer"></div>
+</body>
+</html>

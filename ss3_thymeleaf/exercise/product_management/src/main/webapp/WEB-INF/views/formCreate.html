@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/listProduct :: head"></head>
+<style th:replace="/listProduct :: style"></style>
+<body>
+    <div class="header" th:replace="/listProduct :: header"></div>
+    <div class="main d-flex justify-content-center align-items-center flex-column m-5">
+        <h3>Add new product</h3>
+        <form th:action="@{add-product/save}" th:object="${product}" method="post" novalidate="novalidate">
+            <input type="hidden" th:field="*{id}">
+            <div class="mb-3">
+                <label>Name product</label>
+                <input type="text" th:field="*{nameProduct}"/>
+            </div>
+            <div class="mb-3">
+                <label>Price Product</label>
+                <input type="email" th:field="*{priceProduct}"/>
+            </div>
+            <div class="mb-3">
+                <label>Description Product</label>
+                <input type="text" th:field="*{descriptionProduct}"/>
+            </div>
+            <div class="mb-3">
+                <label>Manufacturer</label>
+                <input type="text" th:field="*{manufacturer}"/>
+            </div>
+            <input type="submit" class="btn btn-warning" value="Save product"/>
+        </form>
+    </div>
+    <div class="footer" th:replace="/listProduct :: footer"></div>
+</body>
+</html>
