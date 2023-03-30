@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class Product implements Cloneable{
+public class Product implements Cloneable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -12,7 +12,9 @@ public class Product implements Cloneable{
     private double priceProduct;
     private String descriptionProduct;
     private String manufacturer;
-    public Product() {}
+
+    public Product() {
+    }
 
     public Product(int id, String nameProduct, double priceProduct, String descriptionProduct, String manufacturer) {
         this.id = id;

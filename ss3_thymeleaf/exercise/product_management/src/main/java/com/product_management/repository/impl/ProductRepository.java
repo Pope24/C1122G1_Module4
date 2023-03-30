@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -79,9 +80,18 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public void deleteProduct(int id) {
-        Product product = getProductById(id);
-        Session session = sessionFactory.openSession();
-        session.delete(product);
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            Product product = getProductById(id);
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.delete(product);
+            transaction.commit();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

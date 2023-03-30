@@ -5,9 +5,6 @@
     <title>List Product</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-            crossorigin="anonymous"></script>
 </head>
 <style th:fragment="style">
     h1,
@@ -296,10 +293,33 @@
             <td th:text="${product.getManufacturer()}"></td>
             <td><a th:href="@{product/{id}/edit(id=${product.getId()})}" style="text-decoration: underline">edit</a>
             </td>
-            <td><a th:href="@{product/{id}/delete(id=${product.getId()})}" style="text-decoration: underline">delete</a>
+            <td><a th:href="@{product/{id}/delete(id=${product.getId()})}"
+                   th:onclick="'passId('+ ${product.getId()} +')'"
+                   style="text-decoration: underline"
+                   data-bs-toggle="modal" data-bs-target="#exampleModal">delete</a>
             </td>
-            <td><a th:href="@{product/{id}/view(id=${product.getId()})}" style="text-decoration: underline">view</a>
+            <td>
+                <a th:href="@{product/{id}/view(id=${product.getId()})}" style="text-decoration: underline">view</a>
             </td>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete product</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            You want to delete this, sure ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" id="delete-modal-btn">Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </tr>
         </tbody>
     </table>
@@ -393,19 +413,21 @@
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="footer-bottom">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <a href="">Privacy policy</a>
-                    </div>
-                    <div class="col-sm-8">
-                        <p>Lorem ipsum dolor sit amet @ 2019 All rights reserved</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </footer>
 </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+    function passId(id) {
+        let deleteModalBtn = document.getElementById("delete-modal-btn");
+        deleteModalBtn.addEventListener('click', () => {
+            console.log(`product/${id}/delete`);
+            window.location = `product/${id}/delete`
+            console.log(window.location.href);
+        })
+    }
+</script>
 </html>
