@@ -1,6 +1,12 @@
 package com.product_management.model;
 
-public class Product {
+import javax.persistence.*;
+
+@Entity
+@Table
+public class Product implements Cloneable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nameProduct;
     private double priceProduct;

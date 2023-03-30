@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class ProductService implements IProductService {
     @Autowired
@@ -40,7 +41,7 @@ public class ProductService implements IProductService {
     @Override
     public Product searchProductByName(String name) {
         List<Product> productList = productRepository.findAll();
-        for (Product product: productList) {
+        for (Product product : productList) {
             if (product.getNameProduct().equals(name)) return product;
         }
         return null;
