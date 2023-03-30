@@ -57,4 +57,10 @@ public class ProductController {
         model.addAttribute("product", productService.getProductById(id));
         return "viewProduct";
     }
+
+    @PostMapping("search-product")
+    public String searchProductByName(@RequestParam String search, Model model) {
+        model.addAttribute("product", productService.searchProductByName(search));
+        return "viewProduct";
+    }
 }
