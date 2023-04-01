@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="~{/listProduct :: head}"></head>
+<head th:replace="~{/listProduct :: head}"></head>
 <body>
-    <div th:replace="~{/listProduct :: header}"></div>
-    <div class="main">
-        <h3>Form create</h3>
-        <form class="form-horizontal" action="/action_page.php">
-            <div class="form-group">
-                <label class="control-label col-sm-2" >Tên sản phẩm:</label>
-                <div class="col-sm-10">
-                    <input type="hidden" class="form-control">
-                </div>
+<div th:replace="~{/listProduct :: header}"></div>
+<div class="main">
+    <h3>Form create</h3>
+    <form class="form-horizontal" action="/product/edit-product/save" th:object="${product}" method="post">
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="hidden" class="form-control" th:field="*{id}">
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" >Tên sản phẩm:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Nhap Tên sản phẩm">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Tên sản phẩm:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Nhap Tên sản phẩm" th:field="*{nameProduct}">
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" >Giá sản phẩm:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Nhap giá sản phẩm">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Giá sản phẩm:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Nhap giá sản phẩm" th:field="*{priceProduct}">
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" >Mô tả của sản phẩm:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Mô tả của sản phẩm">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Mô tả của sản phẩm:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Mô tả của sản phẩm" th:field="*{descriptionProduct}">
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" >Nhà sản xuất:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Nhà sản xuất">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Nhà sản xuất:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Nhà sản xuất" th:field="*{manufacturer}">
             </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
             </div>
-        </form>
-    </div>
-    <div th:replace="~{/listProduct :: footer}"></div>
+        </div>
+    </form>
+</div>
+<div th:replace="~{/listProduct :: footer}"></div>
 </body>
 </html>

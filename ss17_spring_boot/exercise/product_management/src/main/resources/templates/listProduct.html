@@ -55,11 +55,63 @@
         </nav>
     </div>
     <div class="main">
-
+        <a th:href="@{/product/create-product}">Add new product</a>
+        <table class="table">
+            <thead class="table-dark">
+            <tr>
+                <td>ID</td>
+                <td>Tên sản phẩm</td>
+                <td>Giá sản phẩm</td>
+                <td>Mô tả sản phẩm</td>
+                <td>Nhà sản xuất</td>
+                <td>Chi tiết</td>
+                <td>Chỉnh sửa</td>
+                <td>Xoá</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="product : ${productList}">
+                <td th:text="${product.getId()}"></td>
+                <td th:text="${product.getNameProduct()}"></td>
+                <td th:text="${product.getPriceProduct()}"></td>
+                <td th:text="${product.getDescriptionProduct()}"></td>
+                <td th:text="${product.getManufacturer()}"></td>
+                <td><a th:href="@{/product/view/{id}(id=${product.getId()})}">Chi tiết</a></td>
+                <td><a th:href="@{/product/edit/{id}(id=${product.getId()})}">Chỉnh sửa</a></td>
+                <td><a th:onclick="|passId(${product.getId()})|" data-bs-toggle="modal" data-bs-target="#exampleModal">Xoá</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" id="delete-product-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer" th:fragment="footer">
         Footer fragment
     </div>
 </div>
 </body>
+<script>
+    function passId(id) {
+        let deleteProductBtn = document.getElementById("delete-product-btn");
+        deleteProductBtn.addEventListener('click', () => {
+            window.location = '/product/delete/' + id;
+        })
+    }
+</script>
 </html>
