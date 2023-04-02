@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/listBlog :: head">
+</head>
+<body>
+<div class="header" th:replace="/listBlog :: header"></div>
+<div class="main d-flex justify-content-center align-items-center flex-column w-75 m-auto" th:object="${blog}">
+    <h3 th:text="${blog.getTitle()}" class="fw-bolder"></h3>
+    <h5 th:text="${blog.getTypeBlog().getName()}" class="fw-bold float-start"></h5>
+    <img th:src="${blog.getImage()}" alt="">
+    <p th:text="${blog.getContent()}"></p>
+</div>
+<div class="footer" th:replace="/listBlog :: footer"></div>
+</body>
+</html>

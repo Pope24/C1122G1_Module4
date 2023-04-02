@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>List Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="header" th:fragment="header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="main mt-3">
+    <a th:href="@{/blog/create-blog}">Thêm mới blog</a>
+    <div th:each="blog: ${blogList}" class="d-flex justify-content-center m-5"
+         style="box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;cursor: pointer; height: 150px">
+        <div style="flex: 0.2; width: 15%" th:onclick="|showDetailBlog(${blog.getId()})|">
+            <img width="200px" th:src="${blog.getImage()}" alt="">
+        </div>
+        <div style="flex: 0.7; width: 80%" th:onclick="|showDetailBlog(${blog.getId()})|">
+            <p th:text="${blog.getTitle()}" class="fw-bold" style="font-size: 20px"></p>
+            <p th:text="${blog.getContent()}"
+               style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; direction: ltr"></p>
+            <p th:text="${blog.getTypeBlog().getName()}" class="fw-bold"></p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-column" style="width: 5%">
+            <button class="btn btn-warning w-100 mb-3"
+                    th:onclick="|window.location = '/blog/update-blog/'+${blog.getId()}|">Update
+            </button>
+            <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    th:onclick="|deleteBlogById(${blog.getId()})|">Delete
+            </button>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Xác nhận</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn chắc chắn muốn xoá ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="delete-blog-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer" th:fragment="footer">
+    Footer fragment
+</div>
+</body>
+<script>
+    function showDetailBlog(id) {
+        window.location = "/blog/detail/" + id;
+    }
+
+    function deleteBlogById(id) {
+        let deleteBlogBtn = document.getElementById("delete-blog-btn");
+        deleteBlogBtn.addEventListener('click', () => {
+            window.location = '/blog/delete-blog/' + id;
+        })
+    }
+</script>
+</html>
