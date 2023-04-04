@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form user account</title>
+</head>
+<body>
+<form th:action="@{/validate}" method="post" th:object="${user}">
+    <input type="hidden" th:field="*{id}">
+    <input type="text" th:field="*{firstName}">
+    <p style="color: red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+       placeholder="input first name"></p>
+    <input type="text" th:field="*{lastName}">
+    <p style="color: red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+       placeholder="input last name"></p>
+    <input type="text" th:field="*{phoneNumber}">
+    <p style="color: red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"
+       placeholder="input phone number"></p>
+    <input type="text" th:field="*{age}">
+    <p style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}" placeholder="input age"></p>
+    <input type="text" th:field="*{email}">
+    <p style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}" placeholder="input email"></p>
+    <input type="submit" value="Check">
+</form>
+</body>
+</html>
