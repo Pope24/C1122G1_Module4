@@ -92,7 +92,8 @@
     </div>
     <div class="paging d-flex justify-content-center align-items-center">
         <a class="m-3" th:href="@{/blog(page=${blogList.number - 1})}" th:if="${blogList.hasPrevious()}">Trước</a>
-        <a class="m-3" th:each="page, index: ${blogList.iterator()}" th:href="@{/blog(page=${index.index})}"
+        <a class="m-3" th:each="page, index: ${#numbers.sequence(0, blogList.getTotalPages() - 1)}"
+           th:href="@{/blog(page=${index.index})}"
            th:style="(${pageCurrent} == ${index.index}) ? 'color: black': ''"
            th:text="${index.count}"></a>
         <a class="m-3" th:href="@{/blog(page=${blogList.number + 1})}" th:if="${blogList.hasNext()}">Sau</a>

@@ -11,5 +11,6 @@ import java.util.List;
 @Repository
 public interface IBlogRepository extends JpaRepository<Blog, Integer> {
     Page<Blog> findAllByTypeBlog_Id(int id, Pageable pageable);
+
     Page<Blog> findBlogsByTitleContaining(String name, Pageable pageable);
 }
