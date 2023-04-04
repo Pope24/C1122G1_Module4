@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -40,4 +41,10 @@ public class BlogService implements IBlogService {
     public void remove(int id) {
         blogRepository.deleteById(id);
     }
+
+    @Override
+    public Page<Blog> findBlogsByNTitle(String name, Pageable pageable) {
+        return blogRepository.findBlogsByTitleContaining(name, pageable);
+    }
+
 }

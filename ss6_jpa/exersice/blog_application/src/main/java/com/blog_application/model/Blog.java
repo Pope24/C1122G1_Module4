@@ -4,26 +4,22 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "blog")
-public class Blog {
+public class Blog{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
     private String content;
     private String image;
+    @Embedded
+    private GeneralInfo generalInfo;
     @ManyToOne
     private TypeBlog typeBlog;
 
     public Blog() {
+        generalInfo = new GeneralInfo();
     }
 
-    public Blog(int id, String title, String content, String image, TypeBlog typeBlog) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.image = image;
-        this.typeBlog = typeBlog;
-    }
 
     public int getId() {
         return id;
@@ -63,5 +59,13 @@ public class Blog {
 
     public void setTypeBlog(TypeBlog typeBlog) {
         this.typeBlog = typeBlog;
+    }
+
+    public GeneralInfo getGeneralInfo() {
+        return generalInfo;
+    }
+
+    public void setGeneralInfo(GeneralInfo generalInfo) {
+        this.generalInfo = generalInfo;
     }
 }
