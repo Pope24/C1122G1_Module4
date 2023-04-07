@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Info rental</title>
+</head>
+<body>
+<a th:href="@{/}">Quay lại home</a>
+    <label>Mã thuê:</label>
+    <label th:text="${rentalBook.getId()}"></label><br>
+    <label>Tên sách:</label>
+    <label th:text="${rentalBook.getBook().getNameBook()}"></label>
+</body>
+</html>

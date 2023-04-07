@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/create-book/save" th:object="${book}" method="post">
+    <label>Tên sách</label>
+  <input type="text" th:field="*{nameBook}">
+    <label>Miêu tả sách</label>
+  <input type="text" th:field="*{description}">
+    <label>Số lượng</label>
+  <input type="text" th:field="*{amount}">
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>
