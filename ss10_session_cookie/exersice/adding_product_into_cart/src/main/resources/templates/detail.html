@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/shop :: head">
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <img alt="" style="width: 400px" th:src="${product.getImage()}">
+        </div>
+        <div class="col">
+            <p th:text="${product.getName()}"></p>
+            <p th:text="${product.getPrice()}"></p>
+            <p th:text="${product.getDescription()}"></p>
+            <button class="btn btn-danger" th:onclick="|window.location.href = '/add/' +${product.id}+'?action=list'|">
+                Thêm vào giỏ hàng
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
