@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<form>
+    <input id="search" name="search" placeholder="Search..." type="text">
+    <button onclick="submitSearch()">Search</button>
+</form>
+<div id="result"></div>
+<button id="showMoreItems" onclick="showMoreItems()">Tải thêm</button>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function submitSearch() {
+        let nameSearch = $('#search').val();
+        let searchObj = {
+            'search': nameSearch
+        };
+        $.ajax({
+            url: 'http://localhost:8080/api/blogs/search-blog?search=' + nameSearch,
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json; charset=utf'
+            },
+            type: 'POST',
+            success: (event) => {
+                console.log(event.model.blogList.content);
+            },
+            error: (event) => {
+                console.log(event);
+            }
+        });
+        event.preventDefault();
+    }
+
+    let page = new URLSearchParams(window.location.search).get('page');
+    if (page == undefined) {
+        page = 0;
+    }
+
+    function showMoreItems() {
+        page += 1;
+        $.ajax({
+            url: 'http://localhost:8080/api/blogs?page=' + (page),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json; charset=utf'
+            },
+            type: 'GET',
+            success: (event) => {
+                console.log(event.model.blogList.content);
+            },
+            error: (event) => {
+                console.log(event);
+            }
+        });
+        event.preventDefault();
+    }
+</script>
+</html>

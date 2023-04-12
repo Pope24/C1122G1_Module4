@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/api/blogs")
+@CrossOrigin({"*", "http://localhost:63343"})
 public class BlogController {
     @Autowired
     private IBlogService blogService;
@@ -57,6 +58,8 @@ public class BlogController {
 
     @PostMapping("/create-blog/save")
     public String saveNewBlog(@ModelAttribute Blog blog) {
+
+
         blogService.save(blog);
         new ResponseEntity<>(HttpStatus.CREATED);
         return "redirect:/blog";
@@ -90,6 +93,6 @@ public class BlogController {
         Pageable pageable = PageRequest.of(page, 3, sort);
         ModelAndView modelAndView = new ModelAndView("listBlog");
         modelAndView.addObject("blogList", blogService.findBlogsByNTitle(search, pageable));
-        return new ResponseEntity<>(modelAndView, HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(modelAndView, HttpStatus.OK);
     }
 }
